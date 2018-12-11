@@ -1,0 +1,65 @@
+BEGIN{
+var1=0
+var2=0
+var3=0
+var4=0
+var5=0
+var6=0
+var7=0
+var8=0
+var9=0
+var10=0
+var11=0
+rand_count = 200
+}
+
+{
+if ( $1 >= 0 && $1 <= 9 ) { var1++; stars1 = stars1 "*" } else {
+    if ( $1 >= 10 && $1 <= 19 ) { var2++; stars2 = stars2 "*"} else {
+    if ( $1 >= 20 && $1 <= 29 ) { var3++; stars3 = stars3 "*"} else {
+        if ( $1 >= 30 && $1 <= 39 ) { var4++; stars4 = stars4 "*"} else {
+	if ( $1 >= 40 && $1 <= 49 ) { var5++; stars5 = stars5 "*"} else {
+	    if ( $1 >= 50 && $1 <= 59 ) { var6++; stars6 = stars6 "*"} else {
+	    if ( $1 >= 60 && $1 <= 69 ) { var7++; stars7 = stars7 "*"} else {
+	        if ( $1 >= 70 && $1 <= 79 ) { var8++; stars8 = stars8 "*"} else {
+		if ( $1 >= 80 && $1 <= 89 ) { var9++; stars9 = stars9 "*"} else {
+		    if ( $1 >= 90 && $1 <= 99 ) { var10++; stars10 = stars10 "*"} else {
+		    if ( $1 = 100 ) { var11++; stars11 = stars11 "*"}
+		    }
+		}
+	        }
+	    }
+	    }
+	}
+        }
+    }
+    }
+}
+}
+
+END{
+
+printf("%9s%d\t%s\n", "0 - 9: ", var1, stars1)
+printf("%9s%d\t%s\n", "10 - 19: ", var2, stars2)
+printf("%9s%d\t%s\n", "20 - 29: ", var3, stars3)
+printf("%9s%d\t%s\n", "30 - 39: ", var4, stars4)
+printf("%9s%d\t%s\n", "40 - 49: ", var5, stars5)
+printf("%9s%d\t%s\n", "50 - 59: ", var6, stars6)
+printf("%9s%d\t%s\n", "60 - 69: ", var7, stars7)
+printf("%9s%d\t%s\n", "70 - 79: ", var8, stars8)
+printf("%9s%d\t%s\n", "80 - 89: ", var9, stars9)
+printf("%9s%d\t%s\n", "90 - 99: ", var10, stars10)
+printf("%9s%d\t%s\n\n", "100: ", var11, stars11)
+
+printf("%9s%4.2f%s\n", "0 - 9: ", var1/rand_count*100, "%")
+printf("%9s%4.2f%s\n", "10 - 19: ", var2/rand_count*100, "%")
+printf("%9s%4.2f%s\n", "20 - 29: ", var3/rand_count*100, "%")
+printf("%9s%4.2f%s\n", "30 - 39: ", var4/rand_count*100, "%")
+printf("%9s%4.2f%s\n", "40 - 49: ", var5/rand_count*100, "%")
+printf("%9s%4.2f%s\n", "50 - 59: ", var6/rand_count*100, "%")
+printf("%9s%4.2f%s\n", "60 - 69: ", var7/rand_count*100, "%")
+printf("%9s%4.2f%s\n", "70 - 79: ", var8/rand_count*100, "%")
+printf("%9s%4.2f%s\n", "80 - 89: ", var9/rand_count*100, "%")
+printf("%9s%4.2f%s\n", "90 - 99: ", var10/rand_count*100, "%")
+printf("%9s%4.2f%s\n", "100: ", var11/rand_count*100, "%")
+}
